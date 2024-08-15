@@ -1,0 +1,93 @@
+.card-container {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+    max-width: 1200px;
+    overflow: hidden; /* Prevents horizontal scrolling */
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 100%;
+    height: 300px; /* Fixed height for uniform card sizes */
+    perspective: 1000px;
+    box-sizing: border-box; /* Ensures padding/border is included in the width/height */
+}
+
+.flip-card-inner {
+    position: absolute; /* Positioned absolutely within the flip-card */
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s ease-in-out;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+.flip-card-front{
+    color: #fff;
+    font-size: 14px;
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid #ddd; /* Optional: border to visualize the card edges */
+    box-sizing: border-box; /* Ensures padding/border is included in the width/height */
+    margin: 0; /* No margin */
+    padding: 0; /* No padding */
+}
+
+.flip-card-front {
+    background-color: #7952b3;
+}
+
+.flip-card-back {
+    background-color: #7952b3;
+    color: white;
+    transform: rotateY(180deg);
+    text-align: center;
+    padding: 20px;
+}
+
+.flip-card-front img {
+    width: 100%; /* Ensure image covers the entire card front */
+    height: 267px; /* Ensure image covers the entire card front */
+    object-fit: cover; /* Maintain aspect ratio and cover the area */
+    display: block; /* Remove default inline spacing */
+    margin: 0; /* No margin */
+    padding: 0; /* No padding */
+    border: none; /* Ensure no border */
+    
+}
+
+.flip-card-back .btn {
+    background-color: #fff;
+    color: #7952b3;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+
+@media (max-width: 1024px) {
+    .card-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+}

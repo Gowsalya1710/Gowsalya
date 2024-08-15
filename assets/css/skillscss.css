@@ -1,0 +1,118 @@
+.skills_container {
+    row-gap: 2rem;
+    text-align:left;
+    padding: 1rem; /* Added padding for better spacing on smaller screens */
+    margin-left: 5%;
+  }
+  
+  .skills_subtitle {
+    margin-bottom: var(--mb-2);
+  }
+  
+  .skills_text {
+    margin-bottom: var(--mb-4);
+  }
+  
+  .skills_data {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    font-weight: var(--font-semi);
+    padding: 0.5rem 1rem;
+    margin-bottom: var(--mb-4);
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 25px rgba(14, 36, 49, 0.15);
+    background-color: #fff; /* Added background color for better visibility */
+  }
+  
+  .skill_icon {
+    font-size: 2rem;
+    margin-right: var(--mb-2);
+    color: var(--first-color);
+  }
+  
+  .skills_name {
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .skill_bar {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: var(--first-color);
+    height: 0.25rem;
+    border-radius: 0.5rem;
+    z-index: var(--z-back);
+  }
+  
+  /* Skill widths */
+  .skill_html { width: 95%; }
+  .skill_Postgresql { width: 85%; }
+  .skill_js { width: 75%; }
+  .skill_Figma { width: 85%; }
+  .skill_C { width: 85%; }
+  .skill_Java { width: 85%; }
+  .skill_Bootstrap { width: 95%; }
+  .skill_Django { width: 85%; }
+  .skill_Sql { width: 75%; }
+  .skill_Python { width: 85%; }
+  .skill_git { width: 85%; }
+  .skill_Canva { width: 85%; }
+  
+  .data_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+    gap: 80px; /* Space between grid items */
+    max-width: 1200px; /* Set a max-width for better control */
+    width: 100%; /* Full width of the container */
+    margin: 0 auto; /* Center the grid horizontally */
+  }
+  .skills_data {
+    min-width: 350px; /* Set a minimum width for each skill item */
+    max-width: 100%; /* Allow items to take full width available */
+    font-size: 1rem; /* Adjust font size for desktop view */
+    padding: 1rem; /* Increase padding for better spacing */
+    box-sizing: border-box; /* Ensure padding is included in total width */
+  }
+  
+  /* Mobile View - Single Column Layout */
+  @media (max-width: 768px) {
+    .skills_container{
+      margin-left: 0%;
+    }
+    .data_grid {
+      display: flex;
+      flex-direction: column; /* Stack items vertically */
+      gap: 1rem; /* Space between items */
+    }
+    
+    .grid {
+      display: flex;
+      flex-direction: column; /* Ensure vertical stacking */
+      gap: 1rem; /* Space between items */
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .skills_data {
+      font-size: 0.8rem;
+      padding: 0.5rem;
+    }
+  
+    .skill_icon {
+      font-size: 1rem;
+    }
+  
+    .skill_bar {
+      height: 0.1rem;
+    }
+  }
+  
+  /* Ensure images are responsive */
+  .projects p img {
+    width: 100%;
+    max-width: 380px;
+  }
+  

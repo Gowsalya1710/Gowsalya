@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Portfolio</title>
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+     <!-- Bootstrap CSS CDN-->
+    <link rel="stylesheet" href="assets/css/skillscss.css">
+    <link rel="stylesheet" href="assets/css/cards.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap CSS CDN-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+  integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    
+    
+
+
+  <!--Animate on scroll -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!--Lightbox css link-->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.css" />
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" />
+
+  <!--Animate CSS link-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!--PageClip CSS link-->
+  <link rel="stylesheet" href="https://s.pageclip.co/v1/pageclip.css" media="screen">
+
+  <!-- flickity css crousel link -->
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+  <style>
+    .btn:hover{
+background-color: #7952b3;
+border: 1px solid white;
+color: #fff;
+}
+/* Navbar background color */
+.navbar {
+  background-color: #ffffff !important; /* White background */
+}
+
+/* Logo margin */
+.navbar-brand {
+    margin-left: 20px; /* Adjust as needed */
+    font-weight: bolder; /* Boldest font weight */
+}
+
+/* Navbar links */
+.nav-link {
+    font-weight: bold; /* Bold font weight */
+    color: black !important;
+    margin: 0 5% ;
+    border-bottom: 2px solid #fff;
+}
+
+/* Remove hover effect for toggler */
+.navbar-toggler:focus, 
+.navbar-toggler:active {
+    box-shadow: none; /* Remove focus outline and shadow */
+}
+
+/* Change nav-link color on hover */
+.nav-link:hover {
+    color: #0000007e !important; /* Custom hover color */
+    border-bottom: 2px solid #7952b3;
+}
+
+/* Navbar-nav margin */
+.navbar-nav {
+    margin-right: 20px; /* Adjust as needed */
+}
+.h{
+   color: #7952b3;
+   font-weight: bold;
+}
+.h:hover{
+  color: #fff;
+}
+
+/* Center nav-links in mobile view */
+@media (max-width: 900px) {
+    .navbar-nav {
+        text-align: center; /* Center align the nav items */
+        width: 100%; /* Ensure it takes full width */
+    }
+
+    .nav-item {
+        display: inline-block; /* Ensure nav items are inline */
+    }
+}
+
+  </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#" style="color: #7952b3;">Gowsalya</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+            <a href="#home" class="nav-link" style="margin: 0 10px;">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#about" class="nav-link" style="margin: 0 10px;">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="#skills" class="nav-link" style="margin: 0 10px;">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a href="#projects" class="nav-link" style="margin: 0 10px;">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a href="#resume" class="nav-link" style="margin: 0 10px;">Certifications</a>
+          </li>
+          <li class="nav-item">
+            <a href="#contact" class="nav-link" style="margin: 0 10px;">Contact</a>
+          </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+    <main class="main">
+      
+      <!-- HOME SECTION -->
+      <section class="home bd_grid" id="home">
+       
+        <div class="home_data" data-aos="fade-down">
+          <h1 class="home_title">
+            Hi, <br />I'm <span class="home_title-color" style="color: #7952b3;">Gowsalya  </span
+            ><br />Web Developer
+          </h1>
+          <a class="btn btn-outline-secondary h" href="assets/resume.pdf" style="border: 1px solid #7952b3;"
+            onclick='swal({title: "Resume Downloaded",text: "Last Updated : 25 March 2024 ✅",icon: "success"});'
+            download>Download Resume</a><br><br>
+          <a
+            href="https://www.instagram.com/simple_coders/"
+            class="home_social-icon"
+            
+            ><ion-icon name="logo-instagram"></ion-icon></a>
+          <a
+            href="https://www.linkedin.com/in/gowsi-b-aa3a67272/"
+            class="home_social-icon"
+            ><ion-icon name="logo-linkedin"></ion-icon></a>
+          <a
+            href="https://github.com/Gowsalya1710"
+            class="home_social-icon"
+            ><ion-icon name="logo-github"></ion-icon></a>
+        </div>
+        <div class="home_img" data-aos="fade-down" >
+         
+          <img src="./assets/img/gowsalya.jfif" style="border-radius: 50%;">
+            
+        </div>
+        
+      </section>
+
+      <!-- ABOUT SECTION -->
+      <section id="about" class="about">
+        <div class="container">
+          <div class="section-title" data-aos="zoom-in-up" data-aos-easing="ease-in-sine" data-aos-delay="100">
+  
+            <h2 style="color: #7952b3;">ABOUT</h2>
+          </div>
+  
+          <div class="row">
+            <div class="col-lg-4 text-center" data-aos="fade-right" data-aos-easing="ease-in-sine" data-aos-delay="100">
+              <img src="./assets/img/gowsalyab-removebg-preview.png" class="img-fluid about-dp" alt="Arwaz's picture" loading="lazy" style="width: 350px;" height="200px">
+            </div>
+            <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left" data-aos-easing="ease-in-sine"
+              data-aos-delay="100">
+              <p class="font-italic text-justify">
+                Welcome to my website! I'm Gowsalya, a electronics and communication Engineering undergraduate student with a
+                passion for developing innovative solutions through web development. I specialize in FullStack Web Development 
+                and have experience working with technologies such as c, Python, HTML,CSS, JavaScript,Django,sql.
+              </p>
+      
+              <p class="font-italic text-justify">
+                Apart from my technical expertise, I possess soft skills such as problem-solving, teamwork, leadership,
+                and analytical thinking.
+              </p>
+              <p class="font-italic text-justify">
+                Thank you for visiting my website. Feel free to explore my portfolio, projects, and blog section to know
+                more about me and my work.
+              </p>
+  
+              <!--Porfile Views
+              <span style="font-weight:bold;">👉 Profile Views : <span id="views"></span> </span>-->
+  
+              <p style="font-weight:bold;">👉 See My Certificates <a
+                  href="https://bit.ly/4dsZJ1H" target="_black" style="color: #7952b3; font-weight:bold;">🔗Click
+                  here!</a>
+              </p>
+  
+              <!-- Github Graph-->
+              <!--<div id="hide-small-div">
+                <center class="py-2" style="text-decoration:underline;">
+                  <strong>GitHub Contribution Graph</strong>
+                </center>
+                <img src="https://ghchart.rshah.org/7952b3/arwazkhan189" alt="Arwaz's Github chart" class="img-fluid"
+                  loading="lazy" />
+              </div>-->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SKILLS SECTION -->
+
+      <section class="skill section" id="skills">
+
+        <div class="skills_container">
+            <div class="section-title" data-aos="zoom-in-up" data-aos-easing="ease-in-sine" data-aos-delay="150">
+            <h2 style="color: #7952b3;">
+              PROFESSIONAL SKILLS
+            </h2>
+            <p class="skills_text" data-aos="fade-down" data-aos-delay="350">
+              Without sharpen your weapon; standing on the battlefield would not
+              increase your chance of winning
+            </p>
+            </div>
+            <div class="data_grid">
+              <div class="grid">
+            <!-- SKILLS HTML -->
+            <div class="skills_data" data-aos="fade-right">
+              <div class="skills_name">
+                <i class="bx bxl-html5 skill_icon"></i>
+                <span class="skill_name">Html5,CSS</span>
+              </div>
+
+              <div><span class="skill_percentage">95%</span></div>
+
+              <div class="skill_bar skill_html"></div>
+            </div>
+
+            <!-- SKILLS JS -->
+            <div class="skills_data" data-aos="fade-right" data-aos-delay="250">
+              <div class="skills_name">
+                <i class="bx bxl-javascript skill_icon"></i>
+                <span class="skill_name">JS</span>
+              </div>
+
+              <div><span class="skill_percentage">75%</span></div>
+
+              <div class="skill_bar skill_js"></div>
+              </div>
+
+            <!-- SKILLS Figma -->
+            <div class="skills_data" data-aos="fade-right" data-aos-delay="250">
+              <div class="skills_name">
+                <i class="bx bxs-paint skill_icon"></i>
+                <span class="skill_name">FIGMA</span>
+              </div>
+
+              <div><span class="skill_percentage">85%</span></div>
+
+              <div class="skill_bar skill_Figma"></div>
+            </div>
+
+            <!-- SKILLS C-->
+            <div class="skills_data" data-aos="fade-right" data-aos-delay="250">
+              <div class="skills_name">
+                <i class="bx bxs-paint skill_icon"></i>
+                <span class="skill_name">C</span>
+              </div>
+
+              <div><span class="skill_percentage">85%</span></div>
+
+              <div class="skill_bar skill_C"></div>
+            </div>
+            <!-- SKILLS Postgresql -->
+            <div class="skills_data" data-aos="fade-right" data-aos-delay="250">
+              <div class="skills_name">
+                <i class="bx bxs-paint skill_icon"></i>
+                <span class="skill_name">Postgre Sql</span>
+              </div>
+
+              <div><span class="skill_percentage">85%</span></div>
+
+              <div class="skill_bar skill_Postgresql"></div>
+            </div>
+             <!-- SKILLS Java -->
+             <div class="skills_data" data-aos="fade-right" data-aos-delay="250">
+              <div class="skills_name">
+                <i class="bx bxs-paint skill_icon"></i>
+                <span class="skill_name">Java</span>
+              </div>
+
+              <div><span class="skill_percentage">85%</span></div>
+
+              <div class="skill_bar skill_Java"></div>
+            </div>
+            </div>
+            <div class="grid">
+            <!-- SKILLS Canva -->
+            <div class="skills_data"  data-aos="fade-left">
+              <div class="skills_name">
+                <i class="bx bxs-paint skill_icon"></i>
+              <span class="skill_name">Canva</span>
+              </div>
+
+              <div><span class="skill_percentage">85%</span></div>
+
+              <div class="skill_bar skill_Canva"></div>
+            </div>
+            <!-- SKILLS Bootstrap -->
+            <div class="skills_data"  data-aos="fade-left">
+              <div class="skills_name">
+                <i class="bx bxs-paint skill_icon"></i>
+              <span class="skill_name">Bootrstrap</span>
+              </div>
+
+              <div><span class="skill_percentage">85%</span></div>
+
+              <div class="skill_bar skill_Bootstrap"></div>
+            </div>
+            <!-- SKILLS Django -->
+            <div class="skills_data" data-aos="fade-left" data-aos-delay="250">
+              <div class="skills_name">
+                <i class="bx bxs-paint skill_icon"></i>
+                <span class="skill_name">Django</span>
+              </div>
+
+              <div><span class="skill_percentage">85%</span></div>
+
+              <div class="skill_bar skill_Django"></div>
+            </div>
+            <!-- SKILLS Sql -->
+            <div class="skills_data" data-aos="fade-left" data-aos-delay="250">
+              <div class="skills_name">
+                <i class="bx bxs-paint skill_icon"></i>
+                <span class="skill_name">Sql</span>
+              </div>
+
+              <div><span class="skill_percentage">85%</span></div>
+
+              <div class="skill_bar skill_Sql"></div>
+            </div>
+            <!-- SKILLS Python -->
+            <div class="skills_data" data-aos="fade-left" data-aos-delay="250">
+              <div class="skills_name">
+                <i class="bx bxs-paint skill_icon"></i>
+                <span class="skill_name">Python</span>
+              </div>
+
+              <div><span class="skill_percentage">85%</span></div>
+
+              <div class="skill_bar skill_Python"></div>
+              </div>
+              <!-- SKILLS git -->
+            <div class="skills_data" data-aos="fade-left" data-aos-delay="250">
+              <div class="skills_name">
+                <i class="bx bxs-paint skill_icon"></i>
+                <span class="skill_name">Git & Github</span>
+              </div>
+
+              <div><span class="skill_percentage">85%</span></div>
+
+              <div class="skill_bar skill_git"></div>
+              </div>
+              </div>
+            </div>
+         </div>
+        
+        
+        
+      </section>
+      <section id='projects' class="projects">
+        <div class="container">
+          <div class="section-title" data-aos="zoom-in-up" data-aos-easing="ease-in-sine" data-aos-delay="150">
+            <h2 style="color: #7952b3;">PROJECTS</h2>
+            <p>You can find more projects on my <a href="https://github.com/Gowsalya1710" target="_blank"
+                style="text-decoration: none;color: #7952b3;" title="Click!"><strong><i class="fa fa-github"></i>
+                  Github</strong></a>.
+            </p>
+          </div>
+          <div class="card-container">
+            <!-- Card 1 -->
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="./assets/img/calculator.jfif" alt="Image 1">
+                        <h5>Calculator</h5>
+                    </div>
+                    <div class="flip-card-back">
+                        <h5>Calculator</h5>
+                        <p>Created a responsive calculator app with an intuitive interface for basic arithmetic, using HTML, CSS, JS, and Bootstrap.</p>
+                        <a href="#" class="btn">Go To</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Repeat similar blocks for other cards -->
+            <!-- Card 2 -->
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="./assets/img/Dropout Rate for College Students Driven by Income Inequality - Non Profit News _ Nonprofit Quarterly.jfif" alt="Image 2">
+                        <h5>Student Dropout</h5>
+                    </div>
+                    <div class="flip-card-back">
+                        <h5>Student Dropout</h5>
+                        <p>Developed a Student Dropout e-learning platform with interactive modules and data-driven insights using HTML, CSS, JS, Django.</p>
+                        <a href="https://github.com/Gowsalya1710/student_dropout.git" class="btn">Go To</a>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="./assets/img/Free Vector _ Goal concept illustration.jfif" alt="Image 1">
+                        <h5>Grab info</h5>
+                    </div>
+                    <div class="flip-card-back">
+                        <h5>Grab info</h5>
+                        <p>Created Grabinfo, a responsive information hub with user-friendly navigation and a robust backend using HTML, CSS, JS, Django.</p>
+                        <a href="#" class="btn">Going on</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Repeat similar blocks for other cards -->
+            <!-- Card 2 -->
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="./assets/img/gift.jfif" alt="Image 2">
+                        <h5>Gift shop</h5>
+                    </div>
+                    <div class="flip-card-back">
+                        <h5>Gift shop</h5>
+                        <p>Crafted a responsive Gift Shop e-commerce site with user login, shopping cart, and robust backend using HTML, CSS, JS, Django.</p>
+                        <a href="https://github.com/Gowsalya1710/Gift-Shop.git" class="btn">Go To</a>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="./assets/img/todolist.jfif" alt="Image 1">
+                        <h5>Todo-List</h5>
+                    </div>
+                    <div class="flip-card-back">
+                        <h5>Todo-List</h5>
+                        <p>Developed a sleek, interactive to-do list app using HTML, CSS, and JavaScript for efficient task management.</p>
+                        <a href="https://github.com/Gowsalya1710/todolist.git" class="btn">Go To</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Repeat similar blocks for other cards -->
+            <!-- Card 2 -->
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="./assets/img/crecab.jfif" alt="Image 2">
+                        <h5>Crecab</h5>
+                    </div>
+                    <div class="flip-card-back">
+                        <h5>Crecab</h5>
+                        <p>Built the Creapers platform for web development and graphic design services with a clean, user-friendly design using HTML, CSS, JS, Bootstrap.</p>
+                        <a href=" https://gowsalya1710.github.io/Crecab/" class="btn">Go To</a>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="./assets/img/chatbot.jfif" alt="Image 1">
+                        <h5>Healthcare Chatbot</h5>
+                    </div>
+                    <div class="flip-card-back">
+                        <h5>Healthcare Chatbot</h5>
+                        <p>Created an AI chatbot with Python's PYTTSX3, featuring text-to-speech, voice responses, and natural language processing for interactive conversations.</p>
+                        <a href="https://github.com/Gowsalya1710/AI-Chatbot.git" class="btn">Go To</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Repeat similar blocks for other cards -->
+            <!-- Card 2 -->
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="./assets/img/weatherwebapp.png" alt="Image 2">
+                        <h5>Weather Web App</h5>
+                    </div>
+                    <div class="flip-card-back">
+                        <h5>Weather Web App</h5>
+                        <p>Built a sleek weather app with real-time updates, location-based forecasts, and a responsive design using HTML, CSS, JS.</p>
+                        <a href="https://gowsalya1710.github.io/weatherapp/" class="btn">Go To</a>
+                    </div>
+                </div>
+            </div>
+         
+        </div>
+        </section>
+                
+
+    <!--resume section-->
+    <section id='resume' class="resume">
+      <div class="container">
+        <div class="section-title" data-aos="zoom-in-up" data-aos-easing="ease-in-sine" data-aos-delay="100">
+          <h2 style="color: #7952b3;">RESUME</h2>
+        <br>
+          <p class="text-justify">
+            <strong style="text-decoration: underline; font-variant: small-caps;">Career Objective :</strong> Seeking a
+            challenging role at a reputed IT organization to utilize my engineering skills that can contribute to the
+            company's growth as well as enhance my knowledge by exploring new things.
+          </p>
+        
+        <div class="btn-download float-center" data-aos="zoom-in-up" data-aos-easing="ease-in-sine"
+          data-aos-delay="100">
+          <a class="btn btn-outline-secondary" href="assets/resume.pdf"
+            onclick='swal({title: "Resume Downloaded",text: "Last Updated : 25 March 2024 ✅",icon: "success"});'
+            download>Download Resume</a>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6" data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-delay="100">
+
+            <h3 class="resume-title">Education</h3>
+            <div class="resume-item ">
+              <h4>Bachelor of engineering</h4>
+              <h5>2021 - 2025</h5>
+              <p><em>Chettinad college of engineering and technology,karur.</em></p>
+              <p class="text-justify">I'm currently pursuing electronics and communication engineering and scored 7.2 CGPA out of 10.
+              </p>
+            </div>
+            <div class="resume-item">
+              <h4>Higher Secondary Exam (10+2)</h4>
+              <h5>2020</h5>
+              <p><em>government Higher Secondary School,Esanatham,karur.</em></p>
+              <p class="text-justify">I successfully passed the Higher Secondary Exam (10+2) and scored 84.6%.</p>
+            </div>
+            <div class="resume-item">
+              <h4>Secondary Exam (10<sup>th</sup>)</h4>
+              <h5>2019</h5>
+              <p><em>Government Higher Secondary School,Esanatham,karur.</em></p>
+              <p class="text-justify">I successfully passed the Secondary Exam (10<sup>th</sup>) and scored 86%.</p>
+            </div>
+          </div>
+          <br>
+          <br>
+          <div class="col-lg-2" data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-delay="100">
+            <h3 class="resume-title">Training</h3>
+            <div class="resume-item">
+              <h4>Zoho creator student training</h4>
+              <h5>2024 - July (3 Days)</h5>
+              <a href="./assets/images/certificate_image/ECIT_FSD_Certificate.png" data-lightbox="certificate"
+                data-title="Certificate of Training - Full Stack Web Development(ECIT IIT Kanpur)"
+                style="color: #7952b3; font-weight:bold;">🔗Certificate</a>
+            </div>
+            <h3 class="resume-title">Internship</h3>
+            <div class="resume-item">
+              <h4>Newtech-Trichy</h4>
+              <h5>2024 - July (3 Days)</h5>
+              <a href="./assets/images/certificate_image/ECIT_FSD_Certificate.png" data-lightbox="certificate"
+                data-title="Certificate of Training - Full Stack Web Development(ECIT IIT Kanpur)"
+                style="color: #7952b3; font-weight:bold;">🔗Certificate</a>
+            </div>
+            <h3 class="resume-title">Courses</h3>
+            <div class="resume-item">
+              <h4>PYTHON-ZERO TO HERO
+              </h4>
+              <a href="./assets/img/Guvi-Python.png" data-lightbox="certificate"
+                data-title="Certificate of Training - Full Stack Web Development(ECIT IIT Kanpur)"
+                style="color: #7952b3; font-weight:bold;">🔗Certificate</a>
+            </div>
+            <div class="resume-item">
+              <h4>MASTERING FIGMA
+                <!--<a href="./assets/images/ArwazKhan_gate2023_Scorecard.png" data-lightbox="certificate"
+                  data-title="Arwaz Khan Gate 2023 Scorecard" style="color: #7952b3; font-weight:bold;">🔗Scorecard</a>-->
+              </h4>
+              <a href="./assets/img/Guvi-UIUX.png" data-lightbox="certificate"
+                data-title="Certificate of Training - Full Stack Web Development(ECIT IIT Kanpur)"
+                style="color: #7952b3; font-weight:bold;">🔗Certificate</a>
+            </div>
+           <!-- <div class="resume-item">
+              <h4>5⭐ Badge Hackerrank</h4>
+            </div>
+            <div class="resume-item">
+              <h4>3⭐ @ CodeChef</h4>
+            </div>-->
+
+            
+            
+            
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--resume section end-->
+
+      <section id='contact' class="contact section-bg">
+        <div class="container">
+          <div class="section-title" data-aos="zoom-in-up" data-aos-easing="ease-in-sine" data-aos-delay="120">
+            <h2 style="color: #7952b3;">CONTACT</h2>
+          </div>
+          <div class="row">
+            <!-- Column 1: Address, Email, Phone, Map -->
+            <div class="col-lg-4 d-flex align-items-stretch my-2" data-aos="zoom-in-up" data-aos-easing="ease-in-sine" data-aos-delay="140">
+              <div class="info">
+                <div class="address">
+                  <i class="fa fa-map-marker"></i>
+                  <h4>Location:</h4>
+                  <p>
+                    <a href="https://www.google.co.in/maps/place/Jobs+Enclave/@22.0868909,82.1821008,17z/data=!3m1!4b1!4m5!3m4!1s0x3a280bc7c2ff6c23:0x4412edddb029ad80!8m2!3d22.0868909!4d82.1842895?shorturl=1" target="_blank" style="text-decoration: none;color: #7952b3;">
+                      karur, India
+                    </a>
+                  </p>
+                </div>
+                <div class="email">
+                  <i class="fa fa-envelope"></i>
+                  <h4>Email:</h4>
+                  <p>
+                    <a href="mailto:gowsalyabalki@gmail.com" style="text-decoration: none;color: #7952b3;">
+                      gowsalyabalki@gmail.com
+                    </a>
+                  </p>
+                </div>
+                <div class="phone">
+                  <i class="fa fa-phone"></i>
+                  <h4>Call:</h4>
+                  <p>
+                    <a href="tel:+917240974211" style="text-decoration: none;color: #7952b3;">
+                      +91 9789635690
+                    </a>
+                  </p>
+                </div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3697.0242488339927!2d82.1821008149509!3d22.08689088543487!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a280bc7c2ff6c23%3A0x4412edddb029ad80!2sJobs%20Enclave!5e0!3m2!1sen!2sin!4v1604940988153!5m2!1sen!2sin" style="border:0; width: 100%; height: 290px;" allowfullscreen loading="lazy"></iframe>
+              </div>
+            </div>
+      
+            <!-- Column 2: Contact Form -->
+             
+            <div class="col-lg-5 info mx-2 my-2" data-aos="zoom-in-up" data-aos-easing="ease-in-sine" data-aos-delay="140">
+              <div class="section-title" data-aos="zoom-in-up" data-aos-easing="ease-in-sine" data-aos-delay="140">
+                <h3>CONTACT FORM</h3>
+              </div>
+              <form action="https://send.pageclip.co/qnLaFhcAVVndZtVNOIgDerlPRuqHUKqy" class="pageclip-form" method="post">
+                <div class="form-group">
+                  <label>Name</label>
+                  <input class="form-control" type="text" name='name' placeholder="Your Name..." required>
+                </div>
+                <div class="form-group">
+                  <label>Email</label>
+                  <input type="email" class="form-control" name="email" placeholder="Your Email..." required>
+                </div>
+                <div class="form-group">
+                  <label>Phone</label>
+                  <input type="tel" id="phone" name='phone' class="form-control" placeholder="Your Phone Number..." required>
+                </div>
+                <div class="form-group">
+                  <label>Message</label>
+                  <textarea class="form-control" rows="3" id='message' name='message' placeholder="Write your message here..." required></textarea>
+                </div>
+                <button type="submit" id='btn-contact' class="btn btn-outline-success mt-2">Submit</button>
+              </form>
+            </div>
+            
+            
+      
+            <!-- Column 3: Social Media Icons -->
+            <div class="col-lg-2 social-icon text-center my-2 mx-2" data-aos="zoom-in-up" data-aos-easing="ease-in-sine" data-aos-delay="140">
+              <h5 class="py-4">Contact me</h5>
+              <hr>
+              <a href="https://www.linkedin.com/in/gowsi-b-aa3a67272/" target="_blank" class="sm-bttn"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+              <a href="https://www.instagram.com/simple_coders/" target="_blank" class="sm-bttn"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+              <a href="https://github.com/Gowsalya1710" target="_blank" class="sm-bttn"><i class="fa fa-github" aria-hidden="true"></i></a>
+            </div>
+          </div>
+        </div>
+      </section>
+      </main>
+  <!--main section end-->
+
+  <!--footer section-->
+  <footer id='footer' class="footer py-4">
+    <div class="footer-copyright text-center pt-1">
+      <i class="fa fa-copyright" aria-hidden="true">
+        <script>document.write(new Date().getFullYear());</script> | All rights reserved
+      </i><br>
+      <p style="font-size:14px">Designed with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="./#">Gowsalya</a></p>
+    </div>
+  </footer>
+  <!--footer section end-->
+
+  <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper)-->
+  
+
+  
+
+  
+
+  <!--INITIALIZE AOS-->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+
+  <!--typedjs file-->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+
+  <!--lightbox js file-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
+
+  <!--jquery easing file-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+
+  <!--PageClip form js-->
+  <script src="https://s.pageclip.co/v1/pageclip.js"></script>
+
+  <!--Sweet Alert CDN-->
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+  <!-- flickity carousels js link- -->
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+  <!--Count Api link to count website views
+  <script async
+    src="https://api.countapi.xyz/hit/arwazkhan189.github.io/visits?callback=portfolioViews"></script>-->
+
+  <!--Main JS File -->
+  <script src="./assets/main.js"></script>
+
+  <!--Start of Tawk.to Script-->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script> 
+  <!--End of Tawk.to Script-->
+  </body>
+</html>
